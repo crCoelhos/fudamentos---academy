@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGCM</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+
+        <div>
+            <span id="logo">SGCM</span>
+        </div>
+
+        <div id="userinfo">
+            <span id="">Usuário: Administrador(admin)</span>
+            <span id=""> Papel: ADMIN</span>
+            <button type="button" class="">Logout</button>
+        </div>
+
+    </header>
+
+
+    <nav>
+        <ul>
+            <li><a href="agenda.html">Agenda</a></li>
+            <li><a href="atendimento.hmlt">Atendimento</a></li>
+            <li><a href="pacientes.html">Pacientes</a></li>
+            <li><a href="profissionais.html">Profissionais</a></li>
+            <li><a href="convenios.html">Convênios</a></li>
+            <li><a href="unidades.html">Unidades</a></li>
+            <li><a href="especialidades.html">Especialidades</a></li>
+            <li><a href="usuarios.html">Usuários</a></li>
+        </ul>
+
+        <main>
+            <div>
+                Erro
+            </div>
+            <div>
+                Sucesso
+            </div>
+
+            <form action="#" method="get">
+                <input type="hidden" name="id">
+
+                <label for="nomeCompleto">Nome</label>
+                <input type="text" name="nomeCompleto" id="nomeCompleto" placeholder="Insira seu nome completo">
+                  
+
+                <label for="nomeUsuario">Usuário</label>
+                <input type="text" name="nomeUsuario" id="nomeUsuario" placeholder="insira o nome do usuário">
+                  
+
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" placeholder="insira a senha">
+                  
+
+                <label for="ativo">Ativo</label>
+                <input type="checkbox" name="ativo" id="ativo">
+                  
+
+                <label for="papel">Papel</label>
+                <select name="papel" id="papel" required>
+                    <option selected="nulo"> </option>
+                    <option value="estudante">estudante</option>
+                    <option value="sofredor">sofredor</option>
+                    <option value="professor">professor</option>
+                    <option value="administrador">administrador</option>
+                </select>
+                <input type="submit" value="Enviar">
+
+            </form>
+
+            <div id="comandos">
+                 
+                <button type="button" class="">Adicionar</button>
+
+                <label for="busca">Digite para pesquisar: </label>
+                <input type="text" id="busca" placeholder="pesquisar">
+                       
+            </div>
+
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID </th>
+                        <th>NOME </th>
+                        <th>USUÁRIO </th>
+                        <th>ATIVO </th>
+                        <th>PAPEL</th>
+                        <th>AÇÕES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>admnistrador</td>
+                        <td>admin</td>
+                        <td>Sim</td>
+                        <td>ADMIN</td>
+                        <td>
+                            <button type="button" class="">Editar</button>
+                            <button type="button" class="">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Christopher</td>
+                        <td>ric</td>
+                        <td>Não</td>
+                        <td>ESTUDANTE</td>
+                        <td>
+                            <button type="button" class="">Editar</button>
+                            <button type="button" class="">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Ric</td>
+                        <td>coelho</td>
+                        <td>Sim</td>
+                        <td>TORCEDOR</td>
+                        <td>
+                            <button type="button" class="">Editar</button>
+                            <button type="button" class="">Excluir</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="6">Total de registros: 3</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+    </nav>
+
+
+    </main>
+    <footer>
+        <span>SGCM - Sistema de Gerenciamento de Clínica Médica</span>
+        <span>
+            Suporte Técnico: 192 |
+            E-mail: <a href="mailto:suportesgmc@ufac.br">suportesgmc@ufac.br</a>
+        </span>
+    </footer>
+</body>
+
+</html>

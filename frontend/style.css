@@ -49,6 +49,7 @@ div#userinfo span {
 
 div#userinfo button {
     margin-left: auto;
+    border: 1px solid;
     /* margin-x auto sempre empurra pro lado contrario ao descrito*/
 }
 
@@ -61,6 +62,7 @@ div#userinfo button {
     div#userinfo {
         text-align: left;
     }
+
     div#userinfo button {
         margin-right: 0;
     }
@@ -85,16 +87,19 @@ nav div#dropdown_conteudo {
 nav div#dropdown_conteudo a {
     display: block;
 }
-@media screen and (max-width: 730px){
-    nav ul li{
+
+@media screen and (max-width: 730px) {
+    nav ul li {
         display: block;
         width: 100%;
     }
-    nav ul li a{
+
+    nav ul li a {
         width: 100%;
 
     }
-    nav div#dropdown_conteudo{
+
+    nav div#dropdown_conteudo {
         position: relative;
     }
 }
@@ -178,19 +183,21 @@ input:required:invalid,
 select:required:invalid {
     border: 2px solid tomato;
 }
-input, select{
+
+input,
+select {
     height: 2em;
     box-sizing: border-box;
 }
 
 
-@media screen and (max-width: 400px){
-    form{
+@media screen and (max-width: 400px) {
+    form {
         word-wrap: 85%;
         text-align: left;
     }
 
-    form div.grid{
+    form div.grid {
         grid-template-columns: 1fr;
     }
 }
@@ -208,7 +215,7 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-button.excluir:hover:not(:disabled)) {
+button.excluir:hover:not(:disabled) {
     background-color: #811b1b;
 }
 

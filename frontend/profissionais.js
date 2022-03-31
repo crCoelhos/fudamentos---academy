@@ -19,7 +19,7 @@ window.onload = function () {
     if (botaoCarregar) {
         botaoCarregar.addEventListener('click', () => {
             console.log("alo")
-            let url = 'https://raw.githubusercontent.com/danielnsilva/webacademyufac/main/usuarios.json';
+            let url = 'https://raw.githubusercontent.com/crCoelhos/gestorHospitalar/main/profissionais.json?token=GHSAT0AAAAAABS5ALHQS6KPOIS2MJO2UZE4YSGDGYQ';
             fetch(url).then(response => response.json()).then(dados => {
                 for (let item in dados) {
                     let linha = document.createElement("tr");
@@ -32,9 +32,9 @@ window.onload = function () {
                     id.classList.add("fit");
                     id.textContent = dados[item].id;
                     nome.textContent = dados[item].nome
-                    usuario.textContent = dados[item].conselho
-                    ativo.textContent = dados[item].especialidade
-                    papel.textContent = dados[item].clinica
+                    conselho.textContent = dados[item].conselho
+                    especialidade.textContent = dados[item].especialidade
+                    clinica.textContent = dados[item].clinica
                     acoes.innerHTML = "<button type='button'> editar </button>" + "<button type='button' class='excluir'> Excluir </button>"
                     linha.appendChild(id);
                     linha.appendChild(nome);

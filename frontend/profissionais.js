@@ -1,25 +1,13 @@
 window.onload = function () {
-    let botoes = document.querySelectorAll("button.excluir");
-    botoes.forEach(item => {
-        item.addEventListener('click', () => {
-            item.parentNode.parentNode.remove();
-        });
-    });
-
-    let alertas = document.querySelectorAll("div.alerta span");
-    alertas.forEach(item => {
-        item.addEventListener('click', () => {
-            item.parentNode.style.visibility = "hidden";
-        });
-    });
-
-    let botaoCarregar = document.querySelector("button#load");
+    let carregar = document.querySelector("button#load");
     let tabela = document.querySelector("table");
     const xhr = new XMLHttpRequest();
-    if (botaoCarregar) {
-        botaoCarregar.addEventListener('click', () => {
-            console.log("alo")
-            let url = 'https://raw.githubusercontent.com/crCoelhos/gestorHospitalar/main/profissionais.json?token=GHSAT0AAAAAABS5ALHQS6KPOIS2MJO2UZE4YSGDGYQ';
+    if (carregar) {
+        carregar.addEventListener('click', () => {
+            document.getElementById('totalReg').innerHTML = "Total de registros: 7";
+
+
+            let url = 'https://raw.githubusercontent.com/crCoelhos/gestorHospitalar/main/profissionais%20-%20Copia.json';
             fetch(url).then(response => response.json()).then(dados => {
                 for (let item in dados) {
                     let linha = document.createElement("tr");
@@ -35,7 +23,7 @@ window.onload = function () {
                     conselho.textContent = dados[item].conselho
                     especialidade.textContent = dados[item].especialidade
                     clinica.textContent = dados[item].clinica
-                    acoes.innerHTML = "<button type='button'> editar </button>" + "<button type='button' class='excluir'> Excluir </button>"
+                    acoes.innerHTML = "<button type='button'> Editar </button>" + "<button type='button' class='excluir'> Excluir </button>"
                     linha.appendChild(id);
                     linha.appendChild(nome);
                     linha.appendChild(conselho);
